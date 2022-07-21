@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TaskService from '../services/TaskService'
 import { withRouter } from 'react-router-dom';
+import { format } from 'date-fns';
 
 
 class ListTaskComponent extends Component {
@@ -36,9 +37,7 @@ class ListTaskComponent extends Component {
     componentDidMount(){
         TaskService.getTasks().then((res) => {
             var tasks = res.data
-            tasks.forEach(task => task.createdView = new Intl.DateTimeFormat(
-                    'en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}
-                ).format(task.created)
+            tasks.forEach(task => task.createdView = format(task.created, 'yyyy/MM/dd kk:mm:ss')
             )
             this.setState({ 
                 tasks: tasks
