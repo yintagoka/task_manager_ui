@@ -18,6 +18,7 @@ function App() {
                           <Route path = "/tasks" component = {ListTaskComponent}></Route>
                           <Route path = "/add-task/:id" component = {CreateTaskComponent}></Route>
                           <Route path = "/view-task/:id" component = {ViewTaskComponent}></Route>
+                          {/* <Route path = "/update-task/:id" component = {UpdateTaskComponent}></Route> */}
                     </Switch>
                 </div>
               <FooterComponent />

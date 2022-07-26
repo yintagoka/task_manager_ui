@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-console.log("server url: " + process.env.REACT_APP_SERVER_URL);
-const TASK_API_BASE_URL = "http://" + process.env.REACT_APP_SERVER_URL + "/task";
+const TASK_API_BASE_URL = "http://localhost:8080/task";
 
 class TaskService {
 

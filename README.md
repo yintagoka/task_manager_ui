@@ -29,50 +29,42 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Run in Docker
+### `npm run eject`
 
-### Localhost
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-#### Build Image
-```docker build -t task_manager_ui_image D:/projects/oracle-interview/ui/react-frontend```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-#### Run Container
-```docker run -it -d -p 3000:3000 -e REACT_APP_SERVER_URL='localhost:8080' --name task_manager_ui task_manager_ui_image```
-We exposed port 3000  
-REACT_APP_SERVER_URL is the URL that points to the TaskManagerAPI
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-#### To run this as part of bigger application:
-This will run both the task_manager_api and task_manager_ui
-```
-cd /home/opc
-sudo docker compose up -d
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-#### To run the application:  
-```http://localhost:3000/tasks```  
+## Learn More
 
-### Oracle Cloud:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-#### To push images to container registry:  
-```docker push sin.ocir.io/axxinayytj1b/task_manager_ui_image:latest```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-#### Connect to instance in oracle cloud:  
-```ssh -i D:/projects/oracle-interview/ssh-key-2022-07-22.key opc@138.2.89.23```
+### Code Splitting
 
-#### Pull image to oracle instance:  
-```sudo docker pull sin.ocir.io/axxinayytj1b/task_manager_ui_image:latest```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-#### Run Container:  
-```sudo docker run -it -d -p 3000:3000 --name task_manager_ui sin.ocir.io/axxinayytj1b/task_manager_ui_image:latest```  
+### Analyzing the Bundle Size
 
-#### To run this as part of bigger application:
-This will run both the task_manager_api and task_manager_ui
-```
-cd /home/opc
-sudo docker compose up -d
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-#### To run the application:  
-```138.2.89.23:3000/tasks```
+### Making a Progressive Web App
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
